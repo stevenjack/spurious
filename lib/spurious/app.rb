@@ -42,7 +42,7 @@ module Spurious
 
         unless options[:aliases].empty? then
           options[:aliases].each do |alias_meth|
-            desc alias_meth, "alias for #{meth}"
+            desc alias_meth, "alias for `spurious #{meth}`"
             define_method(alias_meth) do
               event_loop meth
             end
