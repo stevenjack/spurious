@@ -2,10 +2,10 @@ require 'pathname'
 $: << File.join(Pathname.new(__FILE__).dirname.parent, 'lib')
 
 require 'spurious/app'
-require 'spurious/config'
 require 'stringio'
 gem 'docker-api'
 require 'docker'
+require 'spurious/server'
 
 def capture(stream)
   begin
