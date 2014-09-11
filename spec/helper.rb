@@ -4,6 +4,8 @@ $: << File.join(Pathname.new(__FILE__).dirname.parent, 'lib')
 require 'spurious/app'
 require 'spurious/config'
 require 'stringio'
+gem 'docker-api'
+require 'docker'
 
 def capture(stream)
   begin
