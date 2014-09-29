@@ -35,7 +35,7 @@ module Spurious
           }
         }
       methods.each do |meth, options|
-        desc meth.to_s, "#{meth} for the spurious containers"
+        desc meth.to_s, "#{meth} the spurious containers"
         define_method(meth) do
           event_loop meth
         end
