@@ -7,7 +7,7 @@ describe Spurious::App do
     it 'Pulls the correct images down' do
       docker_provider = double('Docker::Image', :pull => false)
       allow(Docker::Image).to receive(:create).twice.and_return(true)
-      allow(Spurious::Config).to receive(:app).and_return({:images => {:item1 => nil, :item2 => nil}})
+      allow(Spurious::Server::Config).to receive(:new).and_return({:images => {:item1 => nil, :item2 => nil}})
 
       args = %w[init]
       content = capture(:stdout) { Spurious::App.start args }
